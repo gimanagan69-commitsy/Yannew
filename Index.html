@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar TIK & Coding - Yan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #f7d774;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .level {
+      background: rgba(255,255,255,0.1);
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .level h2 {
+      margin-top: 0;
+      color: #ffd369;
+    }
+    button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 15px;
+      background: #f7d774;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ffe98a;
+      transform: scale(1.05);
+    }
+    .code-box {
+      background: #2b2b2b;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-family: monospace;
+      white-space: pre-wrap;
+      display: none;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+  <script>
+    function toggleCode(id) {
+      let codeBox = document.getElementById(id);
+      if (codeBox.style.display === "none") {
+        codeBox.style.display = "block";
+      } else {
+        codeBox.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Halo, Saya Yan 👋</h1>
+    <p>Selamat datang di website belajar TIK & coding dari nol hingga developer!</p>
+  </header>
+
+  <div class="container">
+
+    <!-- LEVEL PEMULA -->
+    <div class="level">
+      <h2>Level 1: Pemula 🚀</h2>
+      <p>Dasar-dasar TIK & coding. Cocok untuk yang baru mulai belajar.</p>
+      <button onclick="toggleCode('pemula')">Lihat Materi</button>
+      <div class="code-box" id="pemula">
+        <h3>Hello World dengan HTML</h3>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Halo Dunia!&lt;/h1&gt;
+    &lt;p&gt;Belajar coding pertama bersama Yan&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+
+    <!-- LEVEL MENENGAH -->
+    <div class="level">
+      <h2>Level 2: Menengah 💻</h2>
+      <p>Menguasai dasar pemrograman dengan interaksi sederhana.</p>
+      <button onclick="toggleCode('menengah')">Lihat Materi</button>
+      <div class="code-box" id="menengah">
+        <h3>Program Sederhana dengan JavaScript</h3>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;JavaScript Alert&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Belajar JavaScript&lt;/h1&gt;
+  &lt;button onclick="alert('Halo Yan! Belajar JavaScript menyenangkan')"&gt;
+    Klik Saya
+  &lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+
+    <!-- LEVEL LANJUTAN -->
+    <div class="level">
+      <h2>Level 3: Standar (Developer) 🧑‍💻</h2>
+      <p>Membangun aplikasi web sederhana dengan HTML, CSS, dan JS.</p>
+      <button onclick="toggleCode('lanjutan')">Lihat Materi</button>
+      <div class="code-box" id="lanjutan">
+        <h3>Aplikasi Kalkulator Sederhana</h3>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Kalkulator Yan&lt;/title&gt;
+  &lt;style&gt;
+    input { width: 50px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Kalkulator Sederhana&lt;/h1&gt;
+  &lt;input id="a" type="number"&gt;
+  + 
+  &lt;input id="b" type="number"&gt;
+  &lt;button onclick="hitung()"&gt; = &lt;/button&gt;
+  &lt;span id="hasil"&gt;?&lt;/span&gt;
+
+  &lt;script&gt;
+    function hitung() {
+      let a = parseInt(document.getElementById('a').value);
+      let b = parseInt(document.getElementById('b').value);
+      document.getElementById('hasil').innerText = a + b;
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Dibuat oleh Yan - Belajar TIK dari Nol 💡
+  </footer>
+
+</body>
+</html>
